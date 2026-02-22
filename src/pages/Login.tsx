@@ -30,20 +30,15 @@ const Login = () => {
           <span className="hover:text-primary cursor-pointer transition">Support</span>
         </div>
   
-        {/* Right Button */}
-        <button className="bg-primary text-white px-6 py-2 rounded-full hover:opacity-90 transition">
-          Get Started
-        </button>
-  
       </div>
   
       {/* MAIN SECTION */}
-      <div className="relative flex flex-1 items-center">
+      <div className="relative flex flex-1 items-center bg-gradient-to-br from-secondary via-white to-secondary">
   
         {/* LEFT SIDE */}
         <div className="relative z-20 w-full md:w-2/5 px-12 md:ml-20">
   
-          <div className="bg-white p-10 rounded-3xl shadow-2xl border border-gray-200">
+          <div className="bg-white/80 backdrop-blur-xl p-10 rounded-3xl shadow-2xl border border-white/40">
   
             <h2 className="text-3xl font-bold text-gray-800 mb-2">
               Welcome Back!
@@ -58,13 +53,13 @@ const Login = () => {
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="w-full px-4 py-3 rounded-xl bg-secondary border border-gray-200 focus:outline-none focus:ring-2 focus:ring-primary transition"
+                className="w-full px-4 py-3 rounded-xl bg-formfield border border-gray-200 focus:outline-none focus:ring-2 focus:ring-primary transition"
               />
   
               <input
                 type="password"
                 placeholder="Enter your password"
-                className="w-full px-4 py-3 rounded-xl bg-secondary border border-gray-200 focus:outline-none focus:ring-2 focus:ring-primary transition"
+                className="w-full px-4 py-3 rounded-xl bg-formfield border border-gray-200 focus:outline-none focus:ring-2 focus:ring-primary transition"
               />
   
               <button
@@ -121,10 +116,10 @@ const Login = () => {
             className="h-full w-full object-contain"
           />
   
-          <div className="absolute inset-0 bg-gradient-to-l from-transparent via-secondary/30 to-white"></div>
+          <div className="absolute inset-0 bg-gradient-to-l from-transparent via-white/40"></div>
   
         </div>
-  
+
       </div>
   
     </div>
