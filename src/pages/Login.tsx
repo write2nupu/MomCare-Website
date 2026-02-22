@@ -11,75 +11,81 @@ const Login = () => {
     <div className="min-h-screen relative flex flex-col bg-white overflow-hidden">
     
       {/* NAVBAR */}
-      <div className="relative z-30 w-full px-12 py-4 flex items-center bg-backgroundHue shadow-md">
-
+      <div className="relative z-30 w-full px-12 py-4 flex items-center justify-between
+                  bg-white shadow-md border-b border-gray-100">
+  
         {/* Logo */}
         <div className="flex items-center gap-2">
-            <img src="/MomCare.svg" className="w-10 h-10" alt="logo" />
-            <span className="text-2xl font-semibold text-primary">
+          <img src="/MomCare.svg" className="w-10 h-10" alt="logo" />
+          <span className="text-2xl font-semibold text-primary">
             MomCare+
-            </span>
+          </span>
         </div>
-
+  
         {/* Center Tabs */}
-        <div className="absolute left-1/2 transform -translate-x-1/2 hidden md:flex gap-12 text-base font-medium text-primary">
-            <span className="hover:opacity-80 cursor-pointer transition">Home</span>
-            <span className="hover:opacity-80 cursor-pointer transition">Features</span>
-            <span className="hover:opacity-80 cursor-pointer transition">Resources</span>
-            <span className="hover:opacity-80 cursor-pointer transition">Support</span>
+        <div className="absolute left-1/2 transform -translate-x-1/2 hidden md:flex gap-12 text-base font-medium text-gray-700">
+          <span className="hover:text-primary cursor-pointer transition">Home</span>
+          <span className="hover:text-primary cursor-pointer transition">Features</span>
+          <span className="hover:text-primary cursor-pointer transition">Resources</span>
+          <span className="hover:text-primary cursor-pointer transition">Support</span>
         </div>
-
+  
+        {/* Right Button */}
+        <button className="bg-primary text-white px-6 py-2 rounded-full hover:opacity-90 transition">
+          Get Started
+        </button>
+  
       </div>
-    
+  
       {/* MAIN SECTION */}
       <div className="relative flex flex-1 items-center">
-    
-        {/* LEFT SIDE (40%) */}
+  
+        {/* LEFT SIDE */}
         <div className="relative z-20 w-full md:w-2/5 px-12 md:ml-20">
-    
+  
           <div className="bg-white p-10 rounded-3xl shadow-2xl border border-gray-200">
-    
+  
             <h2 className="text-3xl font-bold text-gray-800 mb-2">
               Welcome Back!
             </h2>
-    
+  
             <p className="text-sm text-gray-500 mb-8">
               Sign in to continue your pregnancy journey with MomCare+.
             </p>
-    
+  
             <form className="space-y-5">
-    
+  
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="w-full px-4 py-3 rounded-xl bg-formfield border border-gray-200 focus:outline-none focus:ring-2 focus:ring-primary transition"
+                className="w-full px-4 py-3 rounded-xl bg-secondary border border-gray-200 focus:outline-none focus:ring-2 focus:ring-primary transition"
               />
-    
+  
               <input
                 type="password"
                 placeholder="Enter your password"
-                className="w-full px-4 py-3 rounded-xl bg-formfield border border-gray-200 focus:outline-none focus:ring-2 focus:ring-primary transition"
+                className="w-full px-4 py-3 rounded-xl bg-secondary border border-gray-200 focus:outline-none focus:ring-2 focus:ring-primary transition"
               />
-    
+  
               <button
                 type="submit"
                 className="w-full bg-primary text-white py-3 rounded-xl hover:opacity-90 transition font-medium"
               >
                 Sign In
               </button>
-    
+  
             </form>
-    
+  
             {/* Divider */}
             <div className="flex items-center my-6">
               <div className="flex-grow h-px bg-gray-300"></div>
               <span className="px-3 text-sm text-gray-400">OR</span>
               <div className="flex-grow h-px bg-gray-300"></div>
             </div>
-    
+  
             {/* Social Buttons */}
             <div className="space-y-3">
-    
+  
               <button className="w-full flex items-center justify-center gap-3 border border-gray-300 py-2 rounded-xl hover:bg-gray-50 transition">
                 <img
                   src="https://www.svgrepo.com/show/475656/google-color.svg"
@@ -88,7 +94,7 @@ const Login = () => {
                 />
                 Continue with Google
               </button>
-    
+  
               <button className="w-full flex items-center justify-center gap-3 border border-gray-300 py-2 rounded-xl hover:bg-gray-50 transition">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -100,27 +106,27 @@ const Login = () => {
                 </svg>
                 Continue with Apple
               </button>
-    
+  
             </div>
-    
+  
           </div>
         </div>
-    
+  
         {/* RIGHT SIDE IMAGE */}
         <div className="absolute right-0 top-0 h-full w-3/5 hidden md:block">
-    
+  
           <img
             src="/Background.png"
             alt="illustration"
             className="h-full w-full object-contain"
           />
-    
-          <div className="absolute inset-0 bg-gradient-to-l from-transparent via-secondary/40 to-white"></div>
-    
+  
+          <div className="absolute inset-0 bg-gradient-to-l from-transparent via-secondary/30 to-white"></div>
+  
         </div>
-    
+  
       </div>
-    
+  
     </div>
   )
 }
