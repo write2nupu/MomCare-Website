@@ -144,3 +144,6 @@ yarn.lock
 *.njsproj
 *.sln
 *.sw?
+
+# Apple
+.DS_Store
