@@ -11,8 +11,9 @@ const Login = () => {
     <div className="min-h-screen relative flex flex-col bg-white overflow-hidden">
     
       {/* NAVBAR */}
-      <div className="relative z-30 w-full px-12 py-4 flex items-center justify-between
-                  bg-white shadow-md border-b border-gray-100">
+      <div className="fixed top-0 left-0 w-full z-50
+                bg-white shadow-sm border-b border-gray-200
+                px-12 py-4 flex items-center justify-between">
   
         {/* Logo */}
         <div className="flex items-center gap-2">
