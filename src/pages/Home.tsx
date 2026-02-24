@@ -91,6 +91,140 @@ const Home = () => {
         </div>
       </div>
 
+      {/* FEATURES SECTION */}
+      <section className="bg-white py-32 px-12">
+
+        {/* Section Heading */}
+        <div className="max-w-4xl mx-auto text-center mb-20">
+          <h2 className="text-5xl font-bold text-gray-900">
+            Designed for Every Step of Your Journey
+          </h2>
+          <p className="mt-6 text-lg text-gray-600">
+            Four powerful tools working together to support your pregnancy —
+            physically, emotionally, and intelligently.
+          </p>
+        </div>
+
+        {/* 2x2 Grid */}
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12">
+
+          {/* ProgressHub */}
+          <div className="group bg-[#faf7f8] rounded-3xl p-12
+                transition-all duration-500
+                hover:-translate-y-2 hover:shadow-2xl">
+
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+
+              {/* LEFT – BIG VISUAL */}
+              <div className="rounded-2xl overflow-hidden">
+                <img
+                  src="/ProgressHub.png"
+                  alt="ProgressHub"
+                  className="w-full transition-transform duration-500 group-hover:scale-105"
+                />
+              </div>
+
+              {/* RIGHT – TEXT */}
+              <div>
+                <h3 className="text-4xl font-semibold text-gray-900">
+                  ProgressHub
+                </h3>
+
+                <p className="mt-6 text-lg text-gray-600 leading-relaxed">
+                  Visualize your nutrition, hydration, and activity with
+                  structured, trimester-aware insights designed for clarity.
+                </p>
+              </div>
+
+            </div>
+          </div>
+
+
+          {/* MyPlan */}
+          <div className="group bg-gray-50 rounded-3xl p-10
+                          transition-all duration-500
+                          hover:-translate-y-3 hover:shadow-2xl">
+
+            <h3 className="text-3xl font-semibold text-gray-900">
+              MyPlan
+            </h3>
+
+            <p className="mt-4 text-gray-600">
+              Personalized meal and exercise plans designed around your
+              trimester and health profile.
+            </p>
+
+            <div className="mt-8 rounded-2xl overflow-hidden">
+              <img
+                src="/myplan.png"
+                alt="MyPlan"
+                className="w-full transition-transform duration-500 group-hover:scale-105"
+              />
+            </div>
+          </div>
+
+
+          {/* TriTrack */}
+          <div className="group bg-gray-50 rounded-3xl p-10
+                          transition-all duration-500
+                          hover:-translate-y-3 hover:shadow-2xl">
+
+            <h3 className="text-3xl font-semibold text-gray-900">
+              TriTrack
+            </h3>
+
+            <p className="mt-4 text-gray-600">
+              Weekly baby development insights and maternal updates
+              presented in a calm, structured format.
+            </p>
+
+            <div className="mt-8 rounded-2xl overflow-hidden">
+              <img
+                src="/tritrack.png"
+                alt="TriTrack"
+                className="w-full transition-transform duration-500 group-hover:scale-105"
+              />
+            </div>
+          </div>
+
+
+          {/* MoodNest */}
+          <div className="group bg-[#faf7f8] rounded-3xl p-12
+                transition-all duration-500
+                hover:-translate-y-2 hover:shadow-2xl">
+
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+
+              {/* LEFT – VIDEO */}
+              <div className="rounded-2xl overflow-hidden">
+                <video
+                  src="/SmileAnimation1.mp4"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  className="w-full transition-transform duration-500 group-hover:scale-105"
+                />
+              </div>
+
+              {/* RIGHT – TEXT */}
+              <div>
+                <h3 className="text-4xl font-semibold text-gray-900">
+                  MoodNest
+                </h3>
+
+                <p className="mt-6 text-lg text-gray-600 leading-relaxed">
+                  Interactive calming animations designed to reduce anxiety
+                  and support emotional balance throughout your journey.
+                </p>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </section>
+
     </div>
   )
 }
