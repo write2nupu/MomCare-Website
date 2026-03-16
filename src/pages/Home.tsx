@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { faqs } from "../Data/faqs";
+import { Link } from "react-router-dom"
 
 const Home = () => {
 
@@ -14,43 +15,151 @@ const Home = () => {
 
       {/* NAVBAR (same logic as login) */}
       <div className="fixed top-0 left-0 w-full z-50
-                bg-white shadow-sm border-b border-gray-200
-                px-12 py-4 flex items-center justify-between">
+                      bg-white shadow-sm border-b border-gray-200
+                      px-12 py-4 flex items-center justify-between">
 
-        <div className="flex items-center gap-2">
+        {/* LOGO */}
+        <Link to="/home" className="flex items-center gap-2">
           <img src="/MomCare.svg" className="w-10 h-10" alt="logo" />
           <span className="text-2xl font-semibold text-primary">
             MomCare+
           </span>
-        </div>
+        </Link>
 
+
+        {/* NAV LINKS */}
         <div className="absolute left-1/2 -translate-x-1/2 hidden md:flex gap-12 text-base font-medium text-gray-700">
 
-          <span className="relative cursor-pointer transition hover:text-primary after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full">
+          {/* HOME */}
+          <Link
+            to="/home"
+            className="relative cursor-pointer transition hover:text-primary
+            after:absolute after:left-0 after:-bottom-1 after:h-[2px]
+            after:w-0 after:bg-primary after:transition-all after:duration-300
+            hover:after:w-full"
+          >
             Home
-          </span>
+          </Link>
 
-          <span className="relative cursor-pointer transition hover:text-primary after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full">
-            Features
-          </span>
 
-          <span className="relative cursor-pointer transition hover:text-primary after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full">
-            Resources
-          </span>
+          {/* ABOUT DROPDOWN */}
+          <div className="relative group">
 
-          <span className="relative cursor-pointer transition hover:text-primary after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full">
-            Support
-          </span>
+            <span className="flex items-center gap-1 cursor-pointer transition hover:text-primary
+                            after:absolute after:left-0 after:-bottom-1 after:h-[2px]
+                            after:w-0 after:bg-primary after:transition-all after:duration-300
+                            group-hover:after:w-full">
+
+              About
+
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="w-4 h-4 transition-transform duration-300 group-hover:rotate-180"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth="2"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+              </svg>
+
+            </span>
+
+
+            {/* DROPDOWN */}
+            <div className="absolute top-full left-1/2 -translate-x-1/2 mt-4
+                            w-56 bg-white rounded-xl shadow-lg border border-gray-200
+                            opacity-0 invisible translate-y-2
+                            group-hover:opacity-100 group-hover:visible group-hover:translate-y-0
+                            transition-all duration-200">
+
+              <ul className="py-2 text-sm text-gray-700">
+
+                <Link to="/about">
+                  <li className="px-4 py-2 cursor-pointer transition-all duration-200
+                                hover:bg-primary/10 hover:text-primary hover:pl-5">
+                    About Us
+                  </li>
+                </Link>
+
+                <Link to="/privacy-policy">
+                  <li className="px-4 py-2 cursor-pointer transition-all duration-200
+                                hover:bg-primary/10 hover:text-primary hover:pl-5">
+                    Privacy Policy
+                  </li>
+                </Link>
+
+                <Link to="/terms-of-service">
+                  <li className="px-4 py-2 cursor-pointer transition-all duration-200
+                                hover:bg-primary/10 hover:text-primary hover:pl-5">
+                    Terms of Service
+                  </li>
+                </Link>
+
+                <Link to="/disclaimers">
+                  <li className="px-4 py-2 cursor-pointer transition-all duration-200
+                                hover:bg-primary/10 hover:text-primary hover:pl-5">
+                    Disclaimers & Citations
+                  </li>
+                </Link>
+
+                <Link to="/gdpr-rights">
+                  <li className="px-4 py-2 cursor-pointer transition-all duration-200
+                                hover:bg-primary/10 hover:text-primary hover:pl-5">
+                    GDPR Rights
+                  </li>
+                </Link>
+
+                <Link to="/team">
+                  <li className="px-4 py-2 cursor-pointer transition-all duration-200
+                                hover:bg-primary/10 hover:text-primary hover:pl-5">
+                    Our Team
+                  </li>
+                </Link>
+
+              </ul>
+
+            </div>
+
+          </div>
+
+
+          {/* FAQ */}
+          <Link
+            to="/faq"
+            className="relative cursor-pointer transition hover:text-primary
+            after:absolute after:left-0 after:-bottom-1 after:h-[2px]
+            after:w-0 after:bg-primary after:transition-all after:duration-300
+            hover:after:w-full"
+          >
+            FAQs
+          </Link>
+
+
+          {/* CONTACT */}
+          <Link
+            to="/contact"
+            className="relative cursor-pointer transition hover:text-primary
+            after:absolute after:left-0 after:-bottom-1 after:h-[2px]
+            after:w-0 after:bg-primary after:transition-all after:duration-300
+            hover:after:w-full"
+          >
+            Contact Us
+          </Link>
 
         </div>
 
+
+        {/* BUTTON */}
         <div>
-          <button className="bg-primary text-white px-5 py-2 rounded-xl shadow hover:opacity-90 transition">
-            Get Started
-          </button>
+          <Link to="/login">
+            <button className="bg-primary text-white px-5 py-2 rounded-xl shadow hover:opacity-90 transition">
+              Get Started
+            </button>
+          </Link>
         </div>
-      </div>
 
+      </div>
 
       {/* HERO SECTION */}
       <div className="min-h-screen bg-white flex items-stretch">
@@ -101,13 +210,13 @@ const Home = () => {
 
               {/* Back Layer */}
               <img
-                src="/sample2.jpg"
+                src="/Screenshot3.jpg"
                 className="absolute bottom-0 left-0 w-80 rounded-3xl z-10"
               />
 
               {/* Middle Layer */}
               <img
-                src="/sample3.jpg"
+                src="/Screenshot2.jpg"
                 className="absolute bottom-0 left-56 w-[420px] rounded-3xl shadow-xl z-30"
               />
 
@@ -366,7 +475,8 @@ const Home = () => {
               <path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.15.15 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.2.2 0 0 1-.054.06.1.1 0 0 1-.066.017H1.146a.1.1 0 0 1-.066-.017.2.2 0 0 1-.054-.06.18.18 0 0 1 .002-.183L7.884 2.073a.15.15 0 0 1 .054-.057m1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767z"/>
               <path d="M7.002 12a1 1 0 1 1 2 0 1 1 0 0 1-2 0M7.1 5.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0z"/>
               </svg>
-            )
+            ),
+            link: "/about"
           },
           {
             title: "Privacy Policy",
@@ -376,7 +486,8 @@ const Home = () => {
                 <path d="M5.338 1.59a61 61 0 0 0-2.837.856.48.48 0 0 0-.328.39c-.554 4.157.726 7.19 2.253 9.188a10.7 10.7 0 0 0 2.287 2.233c.346.244.652.42.893.533q.18.085.293.118a1 1 0 0 0 .101.025 1 1 0 0 0 .1-.025q.114-.034.294-.118c.24-.113.547-.29.893-.533a10.7 10.7 0 0 0 2.287-2.233c1.527-1.997 2.807-5.031 2.253-9.188a.48.48 0 0 0-.328-.39c-.651-.213-1.75-.56-2.837-.855C9.552 1.29 8.531 1.067 8 1.067c-.53 0-1.552.223-2.662.524zM5.072.56C6.157.265 7.31 0 8 0s1.843.265 2.928.56c1.11.3 2.229.655 2.887.87a1.54 1.54 0 0 1 1.044 1.262c.596 4.477-.787 7.795-2.465 9.99a11.8 11.8 0 0 1-2.517 2.453 7 7 0 0 1-1.048.625c-.28.132-.581.24-.829.24s-.548-.108-.829-.24a7 7 0 0 1-1.048-.625 11.8 11.8 0 0 1-2.517-2.453C1.928 10.487.545 7.169 1.141 2.692A1.54 1.54 0 0 1 2.185 1.43 63 63 0 0 1 5.072.56"/>
                 <path d="M9.5 6.5a1.5 1.5 0 0 1-1 1.415l.385 1.99a.5.5 0 0 1-.491.595h-.788a.5.5 0 0 1-.49-.595l.384-1.99a1.5 1.5 0 1 1 2-1.415"/>
               </svg>
-            )
+            ),
+            link: "/privacy-policy"
           },
           {
             title: "Terms of Service",
@@ -386,7 +497,8 @@ const Home = () => {
                 <path d="M10 7v1.076c.54.166 1 .597 1 1.224v2.4c0 .816-.781 1.3-1.5 1.3h-3c-.719 0-1.5-.484-1.5-1.3V9.3c0-.627.46-1.058 1-1.224V7a2 2 0 1 1 4 0M7 7v1h2V7a1 1 0 0 0-2 0M6 9.3v2.4c0 .042.02.107.105.175A.64.64 0 0 0 6.5 12h3a.64.64 0 0 0 .395-.125c.085-.068.105-.133.105-.175V9.3c0-.042-.02-.107-.105-.175A.64.64 0 0 0 9.5 9h-3a.64.64 0 0 0-.395.125C6.02 9.193 6 9.258 6 9.3"/>
                 <path d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2M9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5z"/>
               </svg>
-            )
+            ),
+            link: "/terms-of-service"
           },
           {
             title: "Disclaimers & Citations",
@@ -396,7 +508,8 @@ const Home = () => {
               <path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.15.15 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.2.2 0 0 1-.054.06.1.1 0 0 1-.066.017H1.146a.1.1 0 0 1-.066-.017.2.2 0 0 1-.054-.06.18.18 0 0 1 .002-.183L7.884 2.073a.15.15 0 0 1 .054-.057m1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767z"/>
               <path d="M7.002 12a1 1 0 1 1 2 0 1 1 0 0 1-2 0M7.1 5.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0z"/>
               </svg>
-            )
+            ),
+            link: "/disclaimers"
           },
           {
             title: "GDPR Rights",
@@ -405,7 +518,8 @@ const Home = () => {
               <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" viewBox="0 0 16 16">
               <path d="M11 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0M8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4m0 5.996V14H3s-1 0-1-1 1-4 6-4q.845.002 1.544.107a4.5 4.5 0 0 0-.803.918A11 11 0 0 0 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664zM9 13a1 1 0 0 1 1-1v-1a2 2 0 1 1 4 0v1a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1zm3-3a1 1 0 0 0-1 1v1h2v-1a1 1 0 0 0-1-1"/>
               </svg>
-            )
+            ),
+            link: "/GDPR"
           },
           {
             title: "Our Team",
@@ -414,14 +528,16 @@ const Home = () => {
               <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" viewBox="0 0 16 16">
               <path d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1zm-7.978-1L7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002-.014.002zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4m3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0M6.936 9.28a6 6 0 0 0-1.23-.247A7 7 0 0 0 5 9c-4 0-5 3-5 4q0 1 1 1h4.216A2.24 2.24 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816M4.92 10A5.5 5.5 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275ZM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0m3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4"/>
               </svg>
-            )
+            ),
+            link: "/OurTeam"
           }
 
         ].map((item, i) => (
 
-          <div
+          <Link
             key={i}
-            className="group relative overflow-hidden rounded-2xl border border-gray-200
+            to={item.link}
+            className="group relative block overflow-hidden rounded-2xl border border-gray-200
                       bg-white p-10
                       transition-all duration-500 ease-out
                       hover:-translate-y-1 hover:shadow-xl"
@@ -500,7 +616,7 @@ const Home = () => {
 
             </div>
 
-          </div>
+          </Link>
 
         ))}
 
@@ -649,79 +765,83 @@ const Home = () => {
               </div>
 
               {/* LINKS */}
+              {/* QUICK LINKS */}
               <div>
                 <p className="text-xl font-semibold mb-4">Quick Links</p>
 
                 <ul className="space-y-2 text-white/80 text-m">
 
-                  <li className="relative w-fit cursor-pointer transition-all duration-300 hover:text-white hover:translate-x-1
-                                after:absolute after:left-0 after:-bottom-[2px] after:h-[2px] after:w-0 after:bg-white
-                                after:transition-all after:duration-300 hover:after:w-full">
-                    Home
-                  </li>
+                  <Link to="/home">
+                    <li className="relative w-fit cursor-pointer transition-all duration-300 hover:text-white hover:translate-x-1
+                                  after:absolute after:left-0 after:-bottom-[2px] after:h-[2px] after:w-0 after:bg-white
+                                  after:transition-all after:duration-300 hover:after:w-full">
+                      Home
+                    </li>
+                  </Link>
 
-                  <li className="relative w-fit cursor-pointer transition-all duration-300 hover:text-white hover:translate-x-1
-                                after:absolute after:left-0 after:-bottom-[2px] after:h-[2px] after:w-0 after:bg-white
-                                after:transition-all after:duration-300 hover:after:w-full">
-                    Features
-                  </li>
+                  <Link to="/faq">
+                    <li className="relative w-fit cursor-pointer transition-all duration-300 hover:text-white hover:translate-x-1
+                                  after:absolute after:left-0 after:-bottom-[2px] after:h-[2px] after:w-0 after:bg-white
+                                  after:transition-all after:duration-300 hover:after:w-full">
+                      FAQs
+                    </li>
+                  </Link>
 
-                  <li className="relative w-fit cursor-pointer transition-all duration-300 hover:text-white hover:translate-x-1
-                                after:absolute after:left-0 after:-bottom-[2px] after:h-[2px] after:w-0 after:bg-white
-                                after:transition-all after:duration-300 hover:after:w-full">
-                    Resources
-                  </li>
-
-                  <li className="relative w-fit cursor-pointer transition-all duration-300 hover:text-white hover:translate-x-1
-                                after:absolute after:left-0 after:-bottom-[2px] after:h-[2px] after:w-0 after:bg-white
-                                after:transition-all after:duration-300 hover:after:w-full">
-                    Support
-                  </li>
-
-                  <li className="relative w-fit cursor-pointer transition-all duration-300 hover:text-white hover:translate-x-1
-                                after:absolute after:left-0 after:-bottom-[2px] after:h-[2px] after:w-0 after:bg-white
-                                after:transition-all after:duration-300 hover:after:w-full">
-                    Contact Us
-                  </li>
+                  <Link to="/contact">
+                    <li className="relative w-fit cursor-pointer transition-all duration-300 hover:text-white hover:translate-x-1
+                                  after:absolute after:left-0 after:-bottom-[2px] after:h-[2px] after:w-0 after:bg-white
+                                  after:transition-all after:duration-300 hover:after:w-full">
+                      Contact Us
+                    </li>
+                  </Link>
 
                 </ul>
               </div>
-
 
               <div>
                 <p className="text-xl font-semibold mb-4">Learn More</p>
 
                 <ul className="space-y-2 text-white/80 text-m">
 
-                  <li className="relative w-fit cursor-pointer transition-all duration-300 hover:text-white hover:translate-x-1
-                                after:absolute after:left-0 after:-bottom-[2px] after:h-[2px] after:w-0 after:bg-white
-                                after:transition-all after:duration-300 hover:after:w-full">
-                    About Us
-                  </li>
+                  <Link to="/about">
+                    <li className="relative w-fit cursor-pointer transition-all duration-300 hover:text-white hover:translate-x-1
+                                  after:absolute after:left-0 after:-bottom-[2px] after:h-[2px] after:w-0 after:bg-white
+                                  after:transition-all after:duration-300 hover:after:w-full">
+                      About Us
+                    </li>
+                  </Link>
 
-                  <li className="relative w-fit cursor-pointer transition-all duration-300 hover:text-white hover:translate-x-1
-                                after:absolute after:left-0 after:-bottom-[2px] after:h-[2px] after:w-0 after:bg-white
-                                after:transition-all after:duration-300 hover:after:w-full">
-                    Privacy Policy
-                  </li>
+                  <Link to="/privacy-policy">
+                    <li className="relative w-fit cursor-pointer transition-all duration-300 hover:text-white hover:translate-x-1
+                                  after:absolute after:left-0 after:-bottom-[2px] after:h-[2px] after:w-0 after:bg-white
+                                  after:transition-all after:duration-300 hover:after:w-full">
+                      Privacy Policy
+                    </li>
+                  </Link>
 
-                  <li className="relative w-fit cursor-pointer transition-all duration-300 hover:text-white hover:translate-x-1
-                                after:absolute after:left-0 after:-bottom-[2px] after:h-[2px] after:w-0 after:bg-white
-                                after:transition-all after:duration-300 hover:after:w-full">
-                    Terms of Service
-                  </li>
+                  <Link to="/terms-of-service">
+                    <li className="relative w-fit cursor-pointer transition-all duration-300 hover:text-white hover:translate-x-1
+                                  after:absolute after:left-0 after:-bottom-[2px] after:h-[2px] after:w-0 after:bg-white
+                                  after:transition-all after:duration-300 hover:after:w-full">
+                      Terms of Service
+                    </li>
+                  </Link>
 
-                  <li className="relative w-fit cursor-pointer transition-all duration-300 hover:text-white hover:translate-x-1
-                                after:absolute after:left-0 after:-bottom-[2px] after:h-[2px] after:w-0 after:bg-white
-                                after:transition-all after:duration-300 hover:after:w-full">
-                    GDPR Rights
-                  </li>
+                  <Link to="/gdpr-rights">
+                    <li className="relative w-fit cursor-pointer transition-all duration-300 hover:text-white hover:translate-x-1
+                                  after:absolute after:left-0 after:-bottom-[2px] after:h-[2px] after:w-0 after:bg-white
+                                  after:transition-all after:duration-300 hover:after:w-full">
+                      GDPR Rights
+                    </li>
+                  </Link>
 
-                  <li className="relative w-fit cursor-pointer transition-all duration-300 hover:text-white hover:translate-x-1
-                                after:absolute after:left-0 after:-bottom-[2px] after:h-[2px] after:w-0 after:bg-white
-                                after:transition-all after:duration-300 hover:after:w-full">
-                    Disclaimers & Citations
-                  </li>
+                  <Link to="/disclaimers">
+                    <li className="relative w-fit cursor-pointer transition-all duration-300 hover:text-white hover:translate-x-1
+                                  after:absolute after:left-0 after:-bottom-[2px] after:h-[2px] after:w-0 after:bg-white
+                                  after:transition-all after:duration-300 hover:after:w-full">
+                      Disclaimers & Citations
+                    </li>
+                  </Link>
 
                 </ul>
               </div>
@@ -769,7 +889,6 @@ const Home = () => {
           </p>
         </div>
       </section>
-
 
     </div>
   )
