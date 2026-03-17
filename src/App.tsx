@@ -15,6 +15,7 @@ import React from "react";
 
 import FAQ from "./pages/FAQ"
 import ContactUs from "./pages/ContactUs"
+import ProfilePage from "./pages/ProfilePage";
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
           <Route path="/faq" element={<FAQ />} />
           <Route path="/contact" element={<ContactUs />} />
 
+          <Route path="/profile" element={<ProfilePage />} />
           <Route path="*" element={<div>Page Not Found</div>} />
         </Routes>
       </RouteLoader>
