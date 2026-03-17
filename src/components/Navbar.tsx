@@ -6,6 +6,9 @@ export default function Navbar() {
   const { token, user, logout } = useAuth();
   const [open, setOpen] = useState(false);
 
+  const navLinkClass =
+    "relative transition hover:text-primary after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-primary after:transition-all after:duration-300 after:origin-left hover:after:w-full";
+
   return (
     <div
       className="fixed top-0 left-0 w-full z-50
@@ -21,19 +24,14 @@ export default function Navbar() {
       {/* NAV LINKS */}
       <div className="absolute left-1/2 -translate-x-1/2 hidden md:flex gap-12 text-base font-medium text-gray-700">
         
-        <Link
-          to="/"
-          className="relative transition hover:text-primary
-          after:absolute after:left-0 after:-bottom-1 after:h-[2px]
-          after:w-0 after:bg-primary after:transition-all after:duration-300
-          hover:after:w-full"
-        >
+        {/* HOME */}
+        <Link to="/" className={navLinkClass}>
           Home
         </Link>
 
         {/* ABOUT DROPDOWN */}
         <div className="relative group">
-          <span className="flex items-center gap-1 cursor-pointer hover:text-primary transition">
+          <span className={`${navLinkClass} flex items-center gap-1 cursor-pointer`}>
             About
             <svg
               className="w-4 h-4 transition-transform group-hover:rotate-180"
@@ -46,6 +44,7 @@ export default function Navbar() {
             </svg>
           </span>
 
+          {/* DROPDOWN */}
           <div className="absolute top-full left-1/2 -translate-x-1/2 mt-4 w-56 bg-white rounded-xl shadow-lg border border-gray-200 opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-200">
             <ul className="py-2 text-sm text-gray-700">
               {[
@@ -70,11 +69,13 @@ export default function Navbar() {
           </div>
         </div>
 
-        <Link to="/faq" className="hover:text-primary transition">
+        {/* FAQ */}
+        <Link to="/faq" className={navLinkClass}>
           FAQs
         </Link>
 
-        <Link to="/contact" className="hover:text-primary transition">
+        {/* CONTACT */}
+        <Link to="/contact" className={navLinkClass}>
           Contact Us
         </Link>
       </div>
