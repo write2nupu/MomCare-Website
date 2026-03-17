@@ -3,7 +3,7 @@
 import { useState } from "react"
 import {Phone, MapPin } from "lucide-react"
 import { useEffect } from "react"
-import { Link, Outlet } from "react-router-dom"
+import { Outlet } from "react-router-dom"
 import Navbar from "../components/Navbar";
 import CTA from "../components/CTA";
 

@@ -1,5 +1,4 @@
 import { User, Pencil, Trash2, PauseCircle, Download, Ban } from "lucide-react";
-import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import Navbar from "../components/Navbar";
 import { Outlet } from "react-router-dom";

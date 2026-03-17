@@ -1,9 +1,9 @@
 "use client"
 
-import React, { useState } from "react"
+import { useState } from "react"
 import { faqs } from "../Data/faqs"
 import { useEffect } from "react"
-import { Link, Outlet } from "react-router-dom"
+import { Outlet } from "react-router-dom"
 import CTA from "../components/CTA";
 import Navbar from "../components/Navbar";
 
