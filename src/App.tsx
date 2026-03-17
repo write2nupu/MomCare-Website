@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation, Navigate } from "react-router-dom";
 import PageLoader from "./components/PageLoader";
 
 import Login from "./pages/Login"
@@ -22,7 +22,7 @@ function App() {
       <RouteLoader>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/home" element={<Home />} />
+          <Route path="/home" element={<Navigate to="/" />} />
           <Route path="/login" element={<Login />} />
 
           <Route path="/about" element={<AboutUs />} />
@@ -35,17 +35,25 @@ function App() {
           <Route path="/faq" element={<FAQ />} />
           <Route path="/contact" element={<ContactUs />} />
 
+          <Route path="*" element={<div>Page Not Found</div>} />
         </Routes>
       </RouteLoader>
     </BrowserRouter>
   )
 }
+
 function RouteLoader({ children }: { children: React.ReactNode }) {
 
   const location = useLocation();
   const [loading, setLoading] = useState(false);
+  const firstLoad = React.useRef(true);
 
   React.useEffect(() => {
+    if (firstLoad.current) {
+      firstLoad.current = false;
+      return;
+    }
+
     setLoading(true);
 
     const timer = setTimeout(() => {
