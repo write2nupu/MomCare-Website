@@ -1,3 +1,6 @@
+// Source file reference
+// :contentReference[oaicite:0]{index=0}
+
 import { useEffect, useState } from "react"
 import {
   FileText,
@@ -30,9 +33,7 @@ export default function PrivacyPolicy() {
         const el = document.getElementById(section.id)
         if (el) {
           const top = el.getBoundingClientRect().top
-          if (top <= 140) {
-            current = section.id
-          }
+          if (top <= 160) current = section.id
         }
       })
 
@@ -57,19 +58,21 @@ export default function PrivacyPolicy() {
       })
     }
   }
+
   useEffect(() => {
     window.scrollTo(0, 0)
-}, [])
+  }, [])
+
   return (
     <div className="bg-white min-h-screen">
 
       <Navbar />
-      <main className="pt-0">
-      <Outlet />
+      <main>
+        <Outlet />
       </main>
 
       {/* HERO */}
-      <section className="relative pt-40 pb-28 overflow-hidden">
+      <section className="relative pt-28 md:pt-40 pb-20 md:pb-28 overflow-hidden">
 
         <div
           className="absolute inset-0 bg-cover bg-center"
@@ -78,32 +81,48 @@ export default function PrivacyPolicy() {
 
         <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/70 to-[#f4a6b7]/70" />
 
-        <div className="relative z-10 max-w-[1300px] mx-auto px-6 text-white">
+        <div className="relative z-10 max-w-[1300px] mx-auto px-4 md:px-6 text-white">
 
-          <p className="text-sm mb-3 opacity-80">
+          <p className="text-xs md:text-sm mb-3 opacity-80">
             Home / Privacy Policy
           </p>
 
-          <h1 className="text-5xl md:text-6xl font-bold">
+          <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight">
             Because Every Mom Deserves Care —
-            <br /> Including <span className="text-[#f4a6b7]">Her Data</span>
+            <br className="hidden md:block" />
+            Including <span className="text-[#f4a6b7]">Her Data</span>
           </h1>
 
-          <p className="mt-6 text-xl max-w-2xl text-white/90">
+          <p className="mt-4 md:mt-6 text-base md:text-xl max-w-2xl text-white/90">
             Learn how MomCare+ protects your privacy.
           </p>
-
 
         </div>
 
       </section>
 
-
+      {/* MOBILE NAV */}
+      <div className="md:hidden sticky top-[64px] z-30 bg-white border-b overflow-x-auto no-scrollbar">
+        <div className="flex gap-4 px-4 py-3 min-w-max">
+          {sections.map((item) => (
+            <button
+              key={item.id}
+              onClick={() => scrollToSection(item.id)}
+              className={`whitespace-nowrap text-sm pb-1 ${
+                active === item.id
+                  ? "text-primary border-b-2 border-primary"
+                  : "text-gray-500"
+              }`}
+            >
+              {item.label}
+            </button>
+          ))}
+        </div>
+      </div>
 
       {/* CONTENT */}
-      <section className="py-24 px-6">
-        <div className="max-w-[1200px] mx-auto grid md:grid-cols-[260px_1fr] gap-16">
-
+      <section className="py-16 md:py-24 px-4 md:px-6">
+        <div className="max-w-[1200px] mx-auto grid md:grid-cols-[260px_1fr] gap-10 md:gap-16">
 
           {/* SIDEBAR */}
           <div className="hidden md:block">
@@ -113,13 +132,11 @@ export default function PrivacyPolicy() {
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className={`block text-left w-full text-sm transition-all duration-200
-                    ${
-                      active === item.id
-                        ? "text-primary font-semibold border-l-2 border-primary pl-3"
-                        : "text-gray-400 hover:text-gray-700"
-                    }
-                  `}
+                  className={`block text-left w-full text-sm transition-all duration-200 ${
+                    active === item.id
+                      ? "text-primary font-semibold border-l-2 border-primary pl-3"
+                      : "text-gray-400 hover:text-gray-700"
+                  }`}
                 >
                   {item.label}
                 </button>
@@ -128,11 +145,8 @@ export default function PrivacyPolicy() {
             </div>
           </div>
 
-
           {/* MAIN CONTENT */}
           <div className="space-y-20 text-gray-700 text-lg leading-relaxed">
-
-
             {/* HOW IT WORKS */}
             <div id="how-it-works" className="scroll-mt-32">
               <h2 className="flex items-center gap-3 text-2xl font-semibold text-gray-900 mb-4">
@@ -149,11 +163,10 @@ export default function PrivacyPolicy() {
               </ul>
 
               <p className="mt-4">
-                To provide this experience, we collect certain information
-                that you choose to share.
+                To provide this experience, we collect certain information that
+                you choose to share.
               </p>
             </div>
-
 
             {/* DATA COLLECTION */}
             <div id="data-collection" className="scroll-mt-32">
@@ -178,7 +191,6 @@ export default function PrivacyPolicy() {
               </ul>
             </div>
 
-
             {/* WHY DATA */}
             <div id="why-data" className="scroll-mt-32">
               <h2 className="flex items-center gap-3 text-2xl font-semibold text-gray-900 mb-4">
@@ -199,7 +211,6 @@ export default function PrivacyPolicy() {
               </p>
             </div>
 
-
             {/* PROTECTION */}
             <div id="protection" className="scroll-mt-32">
               <h2 className="flex items-center gap-3 text-2xl font-semibold text-gray-900 mb-4">
@@ -219,7 +230,6 @@ export default function PrivacyPolicy() {
               </p>
             </div>
 
-
             {/* RIGHTS */}
             <div id="rights" className="scroll-mt-32">
               <h2 className="flex items-center gap-3 text-2xl font-semibold text-gray-900 mb-4">
@@ -235,14 +245,10 @@ export default function PrivacyPolicy() {
                 <li>Export your data (GDPR compliant)</li>
               </ul>
             </div>
-
-
           </div>
-
         </div>
       </section>
-      
-      {/* CTA */}
+
       <CTA />
 
     </div>

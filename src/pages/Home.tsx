@@ -20,76 +20,53 @@ const Home = () => {
       <Outlet />
       </main>
 
-      {/* HERO SECTION */}
-      <div className="min-h-screen bg-white flex items-stretch">
+{/* HERO SECTION */}
+<section className="relative min-h-[90vh] md:min-h-screen overflow-hidden">
 
-        <div className="w-full mt-[72px] flex items-stretch">
+  {/* 📱 MOBILE IMAGE (9:16) */}
+  <div
+    className="absolute inset-0 bg-cover bg-center md:hidden"
+    style={{ backgroundImage: "url('/HomeHeroImageLong.png')" }}
+  />
 
-          <div className="w-full bg-gradient-to-br from-white via-secondary to-primary
-                          flex items-center justify-between
-                          px-6 md:px-20 relative overflow-hidden">
+  {/* 💻 DESKTOP IMAGE (16:9) */}
+  <div
+    className="absolute inset-0 bg-cover bg-center hidden md:block"
+    style={{ backgroundImage: "url('/HomeHeroImageLong.png')" }}
+  />
 
-            {/* LEFT CONTENT */}
-            <div className="max-w-2xl">
+  {/* 🌫️ GRADIENT OVERLAY (same system as other pages) */}
+  <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/70 to-secondary/70" />
 
-              <h1 className="text-4xl md:text-6xl font-bold text-gray-900 leading-tight">
-                Your Pregnancy Journey,
-                <span className="text-primary"> Simplified.</span>
-              </h1>
+  {/* CONTENT */}
+  <div className="relative z-10 mt-[72px] px-6 md:px-20 flex items-center min-h-[calc(90vh-72px)] md:min-h-[calc(100vh-72px)]">
 
-              <p className="mt-6 md:mt-8 text-base md:text-lg text-gray-600 max-w-xl">
-                Track baby development, monitor your health,
-                and receive personalized insights —
-                all in one beautifully designed app.
-              </p>
+    <div className="max-w-2xl text-white">
 
-              <div className="mt-8 md:mt-10 flex flex-col sm:flex-row gap-4 md:gap-6">
-                <button
-                  className="bg-primary text-white px-8 py-4 rounded-2xl shadow-md
-                            transition-all duration-300 ease-out
-                            hover:-translate-y-[2px] hover:shadow-lg hover:bg-primary/90"
-                >
-                  Download App
-                </button>
+      <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight">
+        Your Pregnancy Journey,
+        <span className="text-white md:text-white"> Simplified.</span>
+      </h1>
 
-                <button
-                  className="border border-primary text-primary px-8 py-4 rounded-2xl
-                            transition-all duration-300 ease-out
-                            hover:-translate-y-[2px] hover:shadow-md hover:bg-white/40"
-                >
-                  Explore Features
-                </button>
+      <p className="mt-4 md:mt-6 text-base md:text-lg text-white/90 max-w-xl">
+        Track baby development, monitor your health,
+        and receive personalized insights —
+        all in one beautifully designed app.
+      </p>
 
-              </div>
-            </div>
+      <div className="mt-6 md:mt-10 flex flex-col sm:flex-row gap-4 md:gap-6">
+        <button className="bg-white text-primary px-8 py-4 rounded-2xl shadow-md transition hover:scale-[1.02]">
+          Download App
+        </button>
 
-
-            {/* RIGHT SIDE SCREENSHOTS */}
-            <div className="relative w-full max-w-[950px] h-full hidden md:flex items-end">
-
-              {/* Back Layer */}
-              <img
-                src="/Screenshot3.jpg"
-                className="absolute bottom-0 left-0 w-80 rounded-3xl z-10"
-              />
-
-              {/* Middle Layer */}
-              <img
-                src="/Screenshot2.jpg"
-                className="absolute bottom-0 left-56 w-[420px] rounded-3xl shadow-xl z-30"
-              />
-
-              {/* Front Layer */}
-              <img
-                src="/Screenshot1.jpg"
-                className="absolute bottom-0 left-[520px] w-80 rounded-3xl z-20"
-              />
-
-            </div>
-
-          </div>
-        </div>
+        <button className="border border-white text-white px-8 py-4 rounded-2xl transition hover:bg-white/20">
+          Explore Features
+        </button>
       </div>
+
+    </div>
+  </div>
+</section>
 
       {/* FEATURES SECTION */}
       <section className="bg-white py-16 md:py-32 px-6 md:px-12">

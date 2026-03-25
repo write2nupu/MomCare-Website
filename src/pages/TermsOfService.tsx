@@ -1,3 +1,6 @@
+// Source file reference
+// :contentReference[oaicite:0]{index=0}
+
 import { useEffect, useState } from "react";
 import {
   CheckCircle,
@@ -9,10 +12,11 @@ import {
   Puzzle,
   CreditCard,
   Landmark
-} from "lucide-react"
+} from "lucide-react";
 import Navbar from "../components/Navbar";
 import CTA from "../components/CTA";
 import { Outlet } from "react-router-dom";
+
 export default function TermsOfService() {
   const sections = [
     { id: "acceptance", label: "Acceptance of Terms" },
@@ -37,9 +41,7 @@ export default function TermsOfService() {
         const el = document.getElementById(section.id);
         if (el) {
           const top = el.getBoundingClientRect().top;
-          if (top <= 140) {
-            current = section.id;
-          }
+          if (top <= 160) current = section.id;
         }
       });
 
@@ -51,34 +53,29 @@ export default function TermsOfService() {
   }, []);
 
   const scrollToSection = (id: string) => {
-    const el = document.getElementById(id)
-  
+    const el = document.getElementById(id);
     if (el) {
-      const yOffset = -120 // adjust based on your navbar height
+      const yOffset = -120;
       const y =
-        el.getBoundingClientRect().top + window.pageYOffset + yOffset
-  
-      window.scrollTo({
-        top: y,
-        behavior: "smooth"
-      })
+        el.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+      window.scrollTo({ top: y, behavior: "smooth" });
     }
-  }
+  };
+
   useEffect(() => {
-          window.scrollTo(0, 0)
-      }, [])
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div className="bg-white min-h-screen">
-      
       <Navbar />
       <main>
-      <Outlet />
+        <Outlet />
       </main>
-      
-      {/* HERO */}
-      <section className="relative pt-40 pb-28 overflow-hidden">
 
+      {/* HERO */}
+      <section className="relative pt-28 md:pt-40 pb-20 md:pb-28 overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: "url('/HeroImageService.jpg')" }}
@@ -86,29 +83,46 @@ export default function TermsOfService() {
 
         <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/70 to-[#f4a6b7]/70" />
 
-        <div className="relative z-10 max-w-[1300px] mx-auto px-6 text-white">
-
-          <p className="text-sm mb-3 opacity-80">
+        <div className="relative z-10 max-w-[1300px] mx-auto px-4 md:px-6 text-white">
+          <p className="text-xs md:text-sm mb-3 opacity-80">
             Home / Terms of Service
           </p>
 
-          <h1 className="text-6xl font-bold">
+          <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold">
             Terms of Service
           </h1>
 
-          <p className="mt-6 text-xl max-w-2xl text-white/90">
-          Good rules create a space where everyone can feel safe and             
-          respected. These terms define how MomCare+ works and how we work             
-          together.
+          <p className="mt-4 md:mt-6 text-base md:text-xl max-w-2xl text-white/90">
+            Good rules create a space where everyone can feel safe and
+            respected. These terms define how MomCare+ works and how we work
+            together.
           </p>
-
         </div>
-
       </section>
 
+      {/* MOBILE NAV */}
+      <div className="md:hidden sticky top-[64px] z-30 bg-white border-b overflow-x-auto no-scrollbar">
+        <div className="flex gap-4 px-4 py-3 min-w-max">
+          {sections.map((item) => (
+            <button
+              key={item.id}
+              onClick={() => scrollToSection(item.id)}
+              className={`whitespace-nowrap text-sm pb-1 ${
+                active === item.id
+                  ? "text-primary border-b-2 border-primary"
+                  : "text-gray-500"
+              }`}
+            >
+              {item.label}
+            </button>
+          ))}
+        </div>
+      </div>
+
       {/* CONTENT */}
-      <section className="py-24 px-6">
-        <div className="max-w-[1200px] mx-auto grid md:grid-cols-[260px_1fr] gap-16">
+      <section className="py-16 md:py-24 px-4 md:px-6">
+        <div className="max-w-[1200px] mx-auto grid md:grid-cols-[260px_1fr] gap-10 md:gap-16">
+
           {/* SIDEBAR */}
           <div className="hidden md:block">
             <div className="sticky top-32 space-y-4">
@@ -116,13 +130,11 @@ export default function TermsOfService() {
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className={`block text-left w-full text-sm transition-all duration-200
-                    ${
-                      active === item.id
-                        ? "text-primary font-semibold border-l-2 border-primary pl-3"
-                        : "text-gray-400 hover:text-gray-700"
-                    }
-                  `}
+                  className={`block text-left w-full text-sm transition-all duration-200 ${
+                    active === item.id
+                      ? "text-primary font-semibold border-l-2 border-primary pl-3"
+                      : "text-gray-400 hover:text-gray-700"
+                  }`}
                 >
                   {item.label}
                 </button>
@@ -279,9 +291,7 @@ export default function TermsOfService() {
         </div>
       </section>
 
-      {/* CTA */}
       <CTA />
-      
     </div>
   );
 }

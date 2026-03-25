@@ -1,11 +1,10 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { faqs } from "../Data/faqs"
-import { useEffect } from "react"
 import { Outlet } from "react-router-dom"
-import CTA from "../components/CTA";
-import Navbar from "../components/Navbar";
+import CTA from "../components/CTA"
+import Navbar from "../components/Navbar"
 
 export default function FAQ() {
 
@@ -14,21 +13,21 @@ export default function FAQ() {
   const toggleFAQ = (index: number) => {
     setOpenIndex(openIndex === index ? null : index)
   }
-    useEffect(() => {
-        window.scrollTo(0, 0)
-    }, [])
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
 
   return (
     <div className="min-h-screen flex flex-col bg-white overflow-x-hidden">
 
-      {/* NAVBAR */}
-        <Navbar />
-        <main>
+      <Navbar />
+      <main>
         <Outlet />
-        </main>
+      </main>
 
-      {/* HERO (same style as About / Privacy) */}
-      <section className="relative pt-40 pb-28 overflow-hidden">
+      {/* HERO */}
+      <section className="relative pt-28 sm:pt-32 md:pt-40 pb-16 sm:pb-20 md:pb-28 overflow-hidden">
 
         <div
           className="absolute inset-0 bg-cover bg-center"
@@ -37,20 +36,21 @@ export default function FAQ() {
 
         <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/70 to-[#f4a6b7]/70" />
 
-        <div className="absolute -top-40 -left-40 w-[500px] h-[500px] bg-pink-200 rounded-full blur-[140px] opacity-30"/>
-        <div className="absolute -bottom-40 right-0 w-[400px] h-[400px] bg-primary/20 rounded-full blur-[120px]"/>
+        {/* background blobs (scaled down for mobile) */}
+        <div className="absolute -top-20 -left-20 w-[250px] h-[250px] sm:w-[400px] sm:h-[400px] bg-pink-200 rounded-full blur-[100px] opacity-30"/>
+        <div className="absolute -bottom-20 right-0 w-[250px] h-[250px] sm:w-[350px] sm:h-[350px] bg-primary/20 rounded-full blur-[100px]"/>
 
-        <div className="relative z-10 max-w-[1300px] mx-auto px-6 text-white">
+        <div className="relative z-10 max-w-[1300px] mx-auto px-4 sm:px-6 text-white">
 
-          <p className="text-sm mb-3 opacity-80">
+          <p className="text-xs sm:text-sm mb-2 sm:mb-3 opacity-80">
             Home / FAQs
           </p>
 
-          <h1 className="text-5xl md:text-6xl font-bold">
+          <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold leading-tight">
             Frequently Asked Questions
           </h1>
 
-          <p className="mt-6 text-xl max-w-2xl text-white/90">
+          <p className="mt-4 sm:mt-6 text-base sm:text-lg md:text-xl max-w-2xl text-white/90">
             Find trusted answers about pregnancy care, baby development,
             and maternal wellbeing with MomCare+.
           </p>
@@ -59,35 +59,33 @@ export default function FAQ() {
 
       </section>
 
-
-
       {/* FAQ SECTION */}
-      <section className="bg-white py-32 px-12">
-        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-20 items-start">
+      <section className="bg-white py-16 sm:py-20 md:py-32 px-4 sm:px-6">
+
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-20 items-start">
 
           {/* LEFT SIDE */}
           <div>
 
-            <p className="text-primary font-semibold mb-4">
+            <p className="text-primary font-semibold mb-3 sm:mb-4 text-sm sm:text-base">
               • FAQs
             </p>
 
-            <h2 className="text-5xl font-bold text-gray-900 leading-tight">
+            <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-gray-900 leading-tight">
               Your pregnancy questions,
               <span className="text-primary"> answered here</span>
             </h2>
 
-            <p className="mt-6 text-lg text-gray-600 leading-relaxed">
+            <p className="mt-4 sm:mt-6 text-sm sm:text-base md:text-lg text-gray-600 leading-relaxed">
               Pregnancy can bring many questions and uncertainties.
               MomCare+ provides clear, reliable answers so you can feel
               confident and supported throughout your journey.
             </p>
 
-
             {/* HELP CARD */}
             <div className="mt-12 rounded-2xl overflow-hidden shadow-sm max-w-md border border-primary/10">
 
-              <div className="bg-primary text-white text-xl px-6 py-4 font-bold text-center">
+              <div className="bg-primary text-white text-lg px-6 py-4 font-bold text-center">
                 Need Help? Let’s Talk.
               </div>
 
@@ -119,10 +117,8 @@ export default function FAQ() {
 
           </div>
 
-
-
-          {/* RIGHT SIDE FAQ ACCORDION */}
-          <div className="space-y-5">
+          {/* RIGHT SIDE FAQ */}
+          <div className="space-y-4 sm:space-y-5">
 
             {faqs.map((faq, i) => {
 
@@ -131,7 +127,7 @@ export default function FAQ() {
               return (
                 <div
                   key={i}
-                  className={`rounded-2xl border transition-all duration-300 overflow-hidden
+                  className={`rounded-xl sm:rounded-2xl border transition-all duration-300 overflow-hidden
                   ${
                     isOpen
                       ? "border-primary bg-primary/10"
@@ -142,11 +138,11 @@ export default function FAQ() {
                   {/* QUESTION */}
                   <button
                     onClick={() => toggleFAQ(i)}
-                    className="w-full flex justify-between items-center px-6 py-5 text-left"
+                    className="w-full flex justify-between items-center px-4 sm:px-6 py-4 sm:py-5 text-left"
                   >
 
                     <span
-                      className={`text-lg font-semibold ${
+                      className={`text-base sm:text-lg font-semibold ${
                         isOpen ? "text-primary" : "text-gray-900"
                       }`}
                     >
@@ -154,7 +150,7 @@ export default function FAQ() {
                     </span>
 
                     <span
-                      className={`text-2xl transition-transform duration-300
+                      className={`text-xl sm:text-2xl transition-transform duration-300
                       ${isOpen ? "rotate-45 text-primary" : "text-gray-400"}
                       `}
                     >
@@ -162,7 +158,6 @@ export default function FAQ() {
                     </span>
 
                   </button>
-
 
                   {/* ANSWER */}
                   <div
@@ -173,7 +168,7 @@ export default function FAQ() {
 
                     <div className="overflow-hidden border-t border-primary/20">
 
-                      <p className="px-6 py-5 text-gray-600 leading-relaxed">
+                      <p className="px-4 sm:px-6 py-4 sm:py-5 text-sm sm:text-base text-gray-600 leading-relaxed">
                         {faq.answer}
                       </p>
 
@@ -188,12 +183,11 @@ export default function FAQ() {
           </div>
 
         </div>
+
       </section>
 
-
-      {/* CTA */}
       <CTA />
-      
+
     </div>
   )
 }
