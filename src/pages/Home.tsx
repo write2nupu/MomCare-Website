@@ -27,23 +27,23 @@ const Home = () => {
 
           <div className="w-full bg-gradient-to-br from-white via-secondary to-primary
                           flex items-center justify-between
-                          px-20 relative overflow-hidden">
+                          px-6 md:px-20 relative overflow-hidden">
 
             {/* LEFT CONTENT */}
             <div className="max-w-2xl">
 
-              <h1 className="text-6xl font-bold text-gray-900 leading-tight">
+              <h1 className="text-4xl md:text-6xl font-bold text-gray-900 leading-tight">
                 Your Pregnancy Journey,
                 <span className="text-primary"> Simplified.</span>
               </h1>
 
-              <p className="mt-8 text-lg text-gray-600 max-w-xl">
+              <p className="mt-6 md:mt-8 text-base md:text-lg text-gray-600 max-w-xl">
                 Track baby development, monitor your health,
                 and receive personalized insights —
                 all in one beautifully designed app.
               </p>
 
-              <div className="mt-10 flex gap-6">
+              <div className="mt-8 md:mt-10 flex flex-col sm:flex-row gap-4 md:gap-6">
                 <button
                   className="bg-primary text-white px-8 py-4 rounded-2xl shadow-md
                             transition-all duration-300 ease-out
@@ -65,7 +65,7 @@ const Home = () => {
 
 
             {/* RIGHT SIDE SCREENSHOTS */}
-            <div className="relative w-[950px] h-full hidden md:flex items-end">
+            <div className="relative w-full max-w-[950px] h-full hidden md:flex items-end">
 
               {/* Back Layer */}
               <img
@@ -92,11 +92,11 @@ const Home = () => {
       </div>
 
       {/* FEATURES SECTION */}
-      <section className="bg-white py-32 px-12">
+      <section className="bg-white py-16 md:py-32 px-6 md:px-12">
 
         {/* Section Heading */}
         <div className="max-w-4xl mx-auto text-center mb-20">
-          <h2 className="text-5xl font-bold text-gray-900">
+          <h2 className="text-3xl md:text-5xl font-bold text-gray-900">
             Designed for Every Step of Your Journey
           </h2>
           <p className="mt-6 text-lg text-gray-600">
@@ -106,10 +106,10 @@ const Home = () => {
         </div>
 
         {/* 2x2 Grid */}
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-6 md:gap-12">
 
           {/* ProgressHub */}
-          <div className="group bg-[#faf7f8] rounded-3xl p-12
+          <div className="group bg-[#faf7f8] rounded-3xl p-6 md:p-12
                           transition-all duration-500
                           hover:-translate-y-2 hover:shadow-2xl">
 
@@ -141,7 +141,7 @@ const Home = () => {
 
               {/* TEXT */}
               <div>
-                <h3 className="text-3xl font-semibold text-gray-900">
+                <h3 className="text-xl md:text-3xl font-semibold text-gray-900">
                   ProgressHub
                 </h3>
 
@@ -156,7 +156,7 @@ const Home = () => {
 
 
           {/* MyPlan */}
-          <div className="group bg-gray-50 rounded-3xl p-12
+          <div className="group bg-gray-50 rounded-3xl p-6 md:p-12
                           transition-all duration-500
                           hover:-translate-y-2 hover:shadow-2xl">
 
@@ -192,7 +192,7 @@ const Home = () => {
 
             {/* TEXT */}
             <div>
-              <h3 className="text-3xl font-semibold text-gray-900">
+              <h3 className="text-xl md:text-3xl font-semibold text-gray-900">
                 MyPlan
               </h3>
 
@@ -207,7 +207,7 @@ const Home = () => {
 
 
         {/* TriTrack */}
-        <div className="group bg-gray-50 rounded-3xl p-12
+        <div className="group bg-gray-50 rounded-3xl p-6 md:p-12
                         transition-all duration-500
                         hover:-translate-y-2 hover:shadow-2xl">
 
@@ -241,7 +241,7 @@ const Home = () => {
 
             {/* TEXT */}
             <div>
-              <h3 className="text-3xl font-semibold text-gray-900">
+              <h3 className="text-xl md:text-3xl font-semibold text-gray-900">
                 TriTrack
               </h3>
 
@@ -256,7 +256,7 @@ const Home = () => {
 
 
         {/* MoodNest */}
-        <div className="group bg-[#faf7f8] rounded-3xl p-12
+        <div className="group bg-[#faf7f8] rounded-3xl p-6 md:p-12
                         transition-all duration-500
                         hover:-translate-y-2 hover:shadow-2xl">
 
@@ -289,7 +289,7 @@ const Home = () => {
 
             {/* TEXT */}
             <div>
-              <h3 className="text-3xl font-semibold text-gray-900">
+              <h3 className="text-xl md:text-3xl font-semibold text-gray-900">
                 MoodNest
               </h3>
 
@@ -307,15 +307,15 @@ const Home = () => {
 
       {/* MOMCARE INFO HUB */}
       {/* INFORMATION SECTION */}
-      <section className="bg-[#f7f8fb] py-32 px-12">
+      <section className="bg-[#f7f8fb] py-16 md:py-32 px-6 md:px-12">
 
         {/* HEADER */}
         <div className="max-w-4xl mx-auto text-center mb-20">
-          <h2 className="text-5xl font-bold text-gray-900">
+          <h2 className="text-3xl md:text-5xl font-bold text-gray-900">
             Learn More About MomCare+
           </h2>
 
-          <p className="mt-6 text-lg text-gray-600">
+          <p className="mt-6 text-sm md:text-lg text-gray-600">
             Transparency, privacy, and trust are at the core of MomCare+. 
             Explore the policies and information guiding our platform.
           </p>
@@ -323,7 +323,7 @@ const Home = () => {
 
 
         {/* GRID */}
-        <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-10">
+        <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-3 gap-6 md:gap-10">
 
         {[
           {
@@ -397,84 +397,52 @@ const Home = () => {
             key={i}
             to={item.link}
             className="group relative block overflow-hidden rounded-2xl border border-gray-200
-                      bg-white p-10
-                      transition-all duration-500 ease-out
+                      bg-white p-5 md:p-10
+                      active:scale-[0.97] transition-all duration-200 ease-out
                       hover:-translate-y-1 hover:shadow-xl"
           >
 
-            {/* GRADIENT HOVER BACKGROUND */}
-            <div
-              className="absolute inset-0 
-                        bg-gradient-to-br from-primary via-primary/90 to-primary/80
-                        translate-y-full
-                        group-hover:translate-y-0
-                        transition-transform duration-500"
-            />
-
             {/* CONTENT */}
-            <div className="relative z-10 flex flex-col h-full">
+            <div className="flex flex-col h-full">
 
               {/* ICON */}
-              <div
-                className="w-14 h-14 flex items-center justify-center
-                          rounded-xl bg-primary/10 text-primary
-                          transition-all duration-300
-                          group-hover:bg-white group-hover:text-primary"
-              >
+              <div className="w-12 h-12 md:w-14 md:h-14 flex items-center justify-center
+                              rounded-xl bg-primary/10 text-primary
+                              mb-4">
                 {item.icon}
               </div>
 
-              {/* TEXT CONTENT */}
-              <div
-                className="mt-10 transition-transform duration-500
-                          group-hover:-translate-y-4"
-              >
-
-                <h3
-                  className="text-xl font-semibold text-gray-900
-                            transition-colors duration-300
-                            group-hover:text-white"
-                >
+              {/* TEXT */}
+              <div className="flex-1">
+                <h3 className="text-base md:text-xl font-semibold text-gray-900">
                   {item.title}
                 </h3>
 
-                <p
-                  className="mt-3 text-gray-600 text-lg leading-relaxed
-                            transition-colors duration-300
-                            group-hover:text-white/90"
-                >
+                <p className="mt-2 text-gray-600 text-sm md:text-base leading-relaxed">
                   {item.desc}
                 </p>
-
               </div>
 
-              {/* ARROW BUTTON */}
-              <div
-                className="mt-6 opacity-0 translate-y-3
-                          group-hover:opacity-100
-                          group-hover:translate-y-0
-                          transition-all duration-300"
-              >
-
+              {/* ARROW (ALWAYS VISIBLE) */}
+              <div className="mt-4 flex justify-end">
                 <div
-                  className="w-11 h-11 flex items-center justify-center
-                            rounded-full bg-white text-primary shadow-md
-                            cursor-pointer"
+                  className="w-9 h-9 md:w-11 md:h-11 flex items-center justify-center
+                            rounded-full bg-primary text-white shadow-md"
                 >
-
-                  <span
-                    className="text-lg transition-transform duration-300
-                              -rotate-45 hover:rotate-0"
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="w-4 h-4 md:w-5 md:h-5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    strokeWidth="2"
                   >
-                    →
-                  </span>
-
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                  </svg>
                 </div>
-
               </div>
 
             </div>
-
           </Link>
 
         ))}
@@ -484,14 +452,14 @@ const Home = () => {
       </section>
 
       {/* FAQ SECTION */}
-      <section className="bg-white py-32 px-12">
-        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-20 items-start">
+      <section className="bg-white py-16 md:py-32 px-6 md:px-12">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-20 items-start">
 
           {/* LEFT SIDE */}
           <div>
             <p className="text-primary font-semibold mb-4">• FAQs</p>
 
-            <h2 className="text-5xl font-bold text-gray-900 leading-tight">
+            <h2 className="text-3xl md:text-5xl font-bold text-gray-900 leading-tight">
               Your pregnancy questions,
               <span className="text-primary"> answered here</span>
             </h2>
