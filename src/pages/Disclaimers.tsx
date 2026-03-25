@@ -137,15 +137,15 @@ export default function Disclaimers() {
           </div>
 
           {/* MAIN CONTENT */}
-          <div className="space-y-20 text-gray-700 text-lg leading-relaxed">
+          <div className="max-w-[680px] md:max-w-none space-y-12 md:space-y-20 text-gray-700 text-[15px] md:text-lg leading-7 md:leading-relaxed">
             {/* 1 */}
             <div id="general" className="scroll-mt-32">
-              <h2 className="flex items-center gap-3 text-2xl font-semibold text-gray-900 mb-4">
+              <h2 className="flex items-center gap-3 text-xl md:text-2xl font-semibold text-gray-900 mb-4">
                 <Stethoscope className="text-primary" size={22} />
                 1. General Medical Disclaimer
               </h2>
 
-              <p>
+              <p className="mt-4">
                 This application is not a substitute for professional medical
                 advice, diagnosis, or treatment. The content provided in
                 MomCare+, including all text, graphics, images, and other
@@ -164,12 +164,12 @@ export default function Disclaimers() {
 
             {/* 2 */}
             <div id="tips" className="scroll-mt-32">
-              <h2 className="flex items-center gap-3 text-2xl font-semibold text-gray-900 mb-4">
+              <h2 className="flex items-center gap-3 text-xl md:text-2xl font-semibold text-gray-900 mb-4">
                 <Lightbulb className="text-primary" size={22} />
                 2. Daily Tips
               </h2>
 
-              <p>
+              <p className="mt-4">
                 DISCLAIMER: The daily tips provided on the dashboard are
                 intended as general guidance and for informational purposes.
                 While we strive to provide accurate and useful information, we
@@ -180,12 +180,12 @@ export default function Disclaimers() {
 
             {/* 3 */}
             <div id="meals" className="scroll-mt-32">
-              <h2 className="flex items-center gap-3 text-2xl font-semibold text-gray-900 mb-4">
+              <h2 className="flex items-center gap-3 text-xl md:text-2xl font-semibold text-gray-900 mb-4">
                 <Utensils className="text-primary" size={22} />
                 3. Personalized Meal Plans
               </h2>
 
-              <p>
+              <p className="mt-4">
                 DISCLAIMER: The meal plans provided in this app are personalized
                 based on the health conditions, allergies, and dietary
                 preferences that you provide. We use this information to
@@ -199,7 +199,7 @@ export default function Disclaimers() {
                 adverse outcomes resulting from the meal plans, including those
                 that may arise from inaccurate or incomplete self-reported data.
               </p>
-              <p>
+              <p className="mt-4">
                 CITATION: The nutritional data and meal plan structures are
                 based on the dataset provided by Kaggle.
               </p>
@@ -207,12 +207,12 @@ export default function Disclaimers() {
 
             {/* 4 */}
             <div id="exercise" className="scroll-mt-32">
-              <h2 className="flex items-center gap-3 text-2xl font-semibold text-gray-900 mb-4">
+              <h2 className="flex items-center gap-3 text-xl md:text-2xl font-semibold text-gray-900 mb-4">
                 <Activity className="text-primary" size={22} />
                 4. Exercise & Yoga Plans
               </h2>
 
-              <p>
+              <p className="mt-4">
                 DISCLAIMER: The exercise and yoga videos in this app have been
                 carefully curated to be generally safe and appropriate for the
                 specific week of pregnancy you are in. We have taken care to
@@ -230,7 +230,7 @@ export default function Disclaimers() {
                 MomCare+ from any and all claims or liabilities for any injury
                 or harm you might sustain.
               </p>
-              <p>
+              <p className="mt-4">
                 CITATION: The yoga and exercise video content is provided
                 courtesy of Pexels.com.
               </p>
@@ -238,12 +238,12 @@ export default function Disclaimers() {
 
             {/* 5 */}
             <div id="growth" className="scroll-mt-32">
-              <h2 className="flex items-center gap-3 text-2xl font-semibold text-gray-900 mb-4">
+              <h2 className="flex items-center gap-3 text-xl md:text-2xl font-semibold text-gray-900 mb-4">
                 <TrendingUp className="text-primary" size={22} />
                 5. Baby Growth & Development
               </h2>
 
-              <p>
+              <p className="mt-4">
                 DISCLAIMER: The week-by-week baby size comparisons (e.g., "the
                 size of an apple") are illustrative approximations meant to
                 provide a fun and relatable way to visualize your baby's growth.
@@ -261,12 +261,12 @@ export default function Disclaimers() {
 
             {/* 6 */}
             <div id="articles" className="scroll-mt-32">
-              <h2 className="flex items-center gap-3 text-2xl font-semibold text-gray-900 mb-4">
+              <h2 className="flex items-center gap-3 text-xl md:text-2xl font-semibold text-gray-900 mb-4">
                 <BookOpen className="text-primary" size={22} />
                 6. Pregnancy Articles
               </h2>
 
-              <p>
+              <p className="mt-4">
                 DISCLAIMER: To provide you with reliable and helpful
                 information, we have made a significant effort to carefully
                 select and aggregate articles from highly reputable sources,
@@ -283,7 +283,7 @@ export default function Disclaimers() {
                 for direct, professional medical advice from your healthcare
                 provider.
               </p>
-              <p>
+              <p className="mt-4">
                 CITATION:
                 <ul>
                   <li>
@@ -298,12 +298,12 @@ export default function Disclaimers() {
 
             {/* 7 */}
             <div id="mood" className="scroll-mt-32">
-              <h2 className="flex items-center gap-3 text-2xl font-semibold text-gray-900 mb-4">
+              <h2 className="flex items-center gap-3 text-xl md:text-2xl font-semibold text-gray-900 mb-4">
                 <Smile className="text-primary" size={22} />
                 7. Mood Tracking & Music
               </h2>
 
-              <p>
+              <p className="mt-4">
                 DISCLAIMER: We understand that pregnancy is an emotional
                 journey. The mood tracking feature is designed to help you
                 maintain your emotional well-being. Based on the mood you log,

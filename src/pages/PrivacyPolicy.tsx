@@ -146,15 +146,15 @@ export default function PrivacyPolicy() {
           </div>
 
           {/* MAIN CONTENT */}
-          <div className="space-y-20 text-gray-700 text-lg leading-relaxed">
+          <div className="space-y-12 md:space-y-20 text-gray-700 text-[15px] md:text-lg leading-7 md:leading-relaxed">
             {/* HOW IT WORKS */}
             <div id="how-it-works" className="scroll-mt-32">
-              <h2 className="flex items-center gap-3 text-2xl font-semibold text-gray-900 mb-4">
+              <h2 className="flex items-center gap-3 text-xl md:text-2xl font-semibold text-gray-900 mb-4">
                 <FileText className="text-primary" size={22} />
                 How MomCare+ Works
               </h2>
 
-              <ul className="list-disc pl-6 space-y-2">
+              <ul className="list-disc pl-5 md:pl-6 space-y-2">
                 <li>Trimester-specific guidance delivered weekly</li>
                 <li>Mood, diet, hydration, symptom & exercise tracking</li>
                 <li>Reminders for scans, checkups, supplements</li>
@@ -170,12 +170,12 @@ export default function PrivacyPolicy() {
 
             {/* DATA COLLECTION */}
             <div id="data-collection" className="scroll-mt-32">
-              <h2 className="flex items-center gap-3 text-2xl font-semibold text-gray-900 mb-4">
+              <h2 className="flex items-center gap-3 text-xl md:text-2xl font-semibold text-gray-900 mb-4">
                 <Database className="text-primary" size={22} />
                 What Information We Collect
               </h2>
 
-              <ul className="list-disc pl-6 space-y-2">
+              <ul className="list-disc pl-5 md:pl-6 space-y-2">
                 <li>Profile & Pregnancy Info (age, due date, start date)</li>
                 <li>Health Data (symptoms, allergies, conditions)</li>
                 <li>Daily Logs (mood, hydration, food, exercise)</li>
@@ -184,7 +184,7 @@ export default function PrivacyPolicy() {
 
               <p className="mt-4 font-medium">Device & Diagnostic Data:</p>
 
-              <ul className="list-disc pl-6 space-y-2 mt-2">
+              <ul className="list-disc pl-5 md:pl-6 space-y-2">
                 <li>Device type & OS version</li>
                 <li>App usage analytics</li>
                 <li>Crash logs (anonymous)</li>
@@ -193,12 +193,12 @@ export default function PrivacyPolicy() {
 
             {/* WHY DATA */}
             <div id="why-data" className="scroll-mt-32">
-              <h2 className="flex items-center gap-3 text-2xl font-semibold text-gray-900 mb-4">
+              <h2 className="flex items-center gap-3 text-xl md:text-2xl font-semibold text-gray-900 mb-4">
                 <List className="text-primary" size={22} />
                 Why We Collect Your Data
               </h2>
 
-              <ul className="list-disc pl-6 space-y-2">
+              <ul className="list-disc pl-5 md:pl-6 space-y-2">
                 <li>Generate weekly pregnancy updates</li>
                 <li>Track diet & exercise progress</li>
                 <li>Send reminders for care routines</li>
@@ -213,12 +213,12 @@ export default function PrivacyPolicy() {
 
             {/* PROTECTION */}
             <div id="protection" className="scroll-mt-32">
-              <h2 className="flex items-center gap-3 text-2xl font-semibold text-gray-900 mb-4">
+              <h2 className="flex items-center gap-3 text-xl md:text-2xl font-semibold text-gray-900 mb-4">
                 <ShieldCheck className="text-primary" size={22} />
                 How We Protect Your Data
               </h2>
 
-              <ul className="list-disc pl-6 space-y-2">
+              <ul className="list-disc pl-5 md:pl-6 space-y-2">
                 <li>On-device encryption of sensitive data</li>
                 <li>Encrypted cloud storage (AWS, Firebase, MongoDB)</li>
                 <li>Secure authentication & APIs</li>
@@ -232,12 +232,12 @@ export default function PrivacyPolicy() {
 
             {/* RIGHTS */}
             <div id="rights" className="scroll-mt-32">
-              <h2 className="flex items-center gap-3 text-2xl font-semibold text-gray-900 mb-4">
+              <h2 className="flex items-center gap-3 text-xl md:text-2xl font-semibold text-gray-900 mb-4">
                 <UserCheck className="text-primary" size={22} />
                 Your Privacy Rights
               </h2>
 
-              <ul className="list-disc pl-6 space-y-2">
+              <ul className="list-disc pl-5 md:pl-6 space-y-2">
                 <li>Access your data</li>
                 <li>Correct inaccurate information</li>
                 <li>Delete your account & data</li>

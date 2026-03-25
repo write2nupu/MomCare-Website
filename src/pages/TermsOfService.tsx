@@ -143,9 +143,9 @@ export default function TermsOfService() {
           </div>
 
           {/* MAIN CONTENT */}
-          <div className="space-y-20 text-gray-700 text-lg leading-relaxed">
+          <div className="max-w-[680px] md:max-w-none space-y-12 md:space-y-20 text-gray-700 text-[15px] md:text-lg leading-7 md:leading-relaxed">
             <div id="acceptance">
-              <h2 className="flex items-center gap-3 text-2xl font-semibold text-gray-900 mb-4">
+              <h2 className="flex items-center gap-3 text-xl md:text-2xl font-semibold text-gray-900 mb-4">
                 <CheckCircle className="text-primary" size={22} />
                 Acceptance of Terms
               </h2>
@@ -162,7 +162,7 @@ export default function TermsOfService() {
             </div>
 
             <div id="eligibility">
-              <h2 className="flex items-center gap-3 text-2xl font-semibold text-gray-900 mb-4">
+              <h2 className="flex items-center gap-3 text-xl md:text-2xl font-semibold text-gray-900 mb-4">
                 <UserCheck className="text-primary" size={22} />
                 Eligibility
               </h2>
@@ -178,7 +178,7 @@ export default function TermsOfService() {
             </div>
 
             <div id="services">
-              <h2 className="flex items-center gap-3 text-2xl font-semibold text-gray-900 mb-4">
+              <h2 className="flex items-center gap-3 text-xl md:text-2xl font-semibold text-gray-900 mb-4">
                 <Sparkles className="text-primary" size={22} />
                 Overview of Services
               </h2>
@@ -202,7 +202,7 @@ export default function TermsOfService() {
             </div>
 
             <div id="disclaimers">
-              <h2 className="flex items-center gap-3 text-2xl font-semibold text-gray-900 mb-4">
+              <h2 className="flex items-center gap-3 text-xl md:text-2xl font-semibold text-gray-900 mb-4">
                 <AlertTriangle className="text-primary" size={22} />
                 Disclaimers
               </h2>
@@ -216,7 +216,7 @@ export default function TermsOfService() {
             </div>
 
             <div id="responsibilities">
-              <h2 className="flex items-center gap-3 text-2xl font-semibold text-gray-900 mb-4">
+              <h2 className="flex items-center gap-3 text-xl md:text-2xl font-semibold text-gray-900 mb-4">
                 <Hand className="text-primary" size={22} />
                 User Responsibilities
               </h2>
@@ -227,7 +227,7 @@ export default function TermsOfService() {
             </div>
 
             <div id="license">
-              <h2 className="flex items-center gap-3 text-2xl font-semibold text-gray-900 mb-4">
+              <h2 className="flex items-center gap-3 text-xl md:text-2xl font-semibold text-gray-900 mb-4">
                 <Shield className="text-primary" size={22} />
                 License & Intellectual Property
               </h2>
@@ -242,7 +242,7 @@ export default function TermsOfService() {
             </div>
 
             <div id="thirdparty">
-              <h2 className="flex items-center gap-3 text-2xl font-semibold text-gray-900 mb-4">
+              <h2 className="flex items-center gap-3 text-xl md:text-2xl font-semibold text-gray-900 mb-4">
                 <Puzzle className="text-primary" size={22} />
                 Third-Party Services
               </h2>
@@ -256,7 +256,7 @@ export default function TermsOfService() {
             </div>
 
             <div id="subscriptions">
-              <h2 className="flex items-center gap-3 text-2xl font-semibold text-gray-900 mb-4">
+              <h2 className="flex items-center gap-3 text-xl md:text-2xl font-semibold text-gray-900 mb-4">
                 <CreditCard className="text-primary" size={22} />
                 Subscriptions
               </h2>
@@ -267,7 +267,7 @@ export default function TermsOfService() {
             </div>
 
             <div id="liability">
-              <h2 className="flex items-center gap-3 text-2xl font-semibold text-gray-900 mb-4">
+              <h2 className="flex items-center gap-3 text-xl md:text-2xl font-semibold text-gray-900 mb-4">
                 <AlertTriangle className="text-primary" size={22} />
                 Limitation of Liability
               </h2>
@@ -278,7 +278,7 @@ export default function TermsOfService() {
             </div>
 
             <div id="law">
-              <h2 className="flex items-center gap-3 text-2xl font-semibold text-gray-900 mb-4">
+              <h2 className="flex items-center gap-3 text-xl md:text-2xl font-semibold text-gray-900 mb-4">
                 <Landmark className="text-primary" size={22} />
                 Governing Law
               </h2>
