@@ -32,7 +32,7 @@ const Home = () => {
   {/* 💻 DESKTOP IMAGE (16:9) */}
   <div
     className="absolute inset-0 bg-cover bg-center hidden md:block"
-    style={{ backgroundImage: "url('/HomeHeroImageLong.png')" }}
+    style={{ backgroundImage: "url('/HeroImageHome.png')" }}
   />
 
   {/* 🌫️ GRADIENT OVERLAY (same system as other pages) */}
