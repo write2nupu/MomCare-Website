@@ -3,7 +3,7 @@ import { useAuth } from "../Context/AuthContext";
 import { useState } from "react";
 
 export default function Navbar() {
-  const { token, user, logout } = useAuth();
+  const { token, user } = useAuth();
 
   const [open, setOpen] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
