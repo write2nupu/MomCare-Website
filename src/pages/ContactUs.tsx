@@ -1,6 +1,6 @@
 "use client"
 
-import { MapPin, Phone } from "lucide-react"
+import { Briefcase, Phone } from "lucide-react"
 import { useEffect, useState } from "react"
 import { Outlet } from "react-router-dom"
 import CTA from "../components/CTA"
@@ -82,21 +82,17 @@ export default function ContactUs() {
                         <Phone size={28} className="absolute right-6 top-6 sm:right-10 sm:top-10 opacity-80" />
 
                         <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-4 sm:mb-6">
-                            Contact us
+                            Support & Assistance
                         </h3>
 
                         <div className="h-[1px] bg-white/40 mb-6 sm:mb-8" />
 
                         <p className="text-white/90 text-sm sm:text-base md:text-lg mb-4 sm:mb-6">
-                            Reach out for help, support, or questions regarding MomCare+.
+                            Get help with MomCare+, report issues, or reach out if something isn't working as expected.
                         </p>
 
                         <p className="text-base sm:text-lg md:text-xl font-semibold break-all">
-                            support@momcare.app
-                        </p>
-
-                        <p className="text-sm sm:text-base md:text-lg mt-2 opacity-90">
-                            +91 98765 43210
+                          support.momcare@vision-labs.site
                         </p>
 
                     </div>
@@ -104,20 +100,20 @@ export default function ContactUs() {
                     {/* HELP CENTER CARD */}
                     <div className="bg-secondary text-primary rounded-2xl sm:rounded-[30px] p-6 sm:p-8 md:p-12 relative overflow-hidden">
 
-                        <MapPin size={28} className="absolute right-6 top-6 sm:right-10 sm:top-10 opacity-80" />
+                        <Briefcase size={28} className="absolute right-6 top-6 sm:right-10 sm:top-10 opacity-80" />
 
                         <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-4 sm:mb-6">
-                            Help Center
+                            Partnerships & Inquiries
                         </h3>
 
                         <div className="h-[1px] bg-primary/20 mb-6 sm:mb-8" />
 
                         <p className="text-sm sm:text-base md:text-lg mb-4 sm:mb-6">
-                            Explore our resources, FAQs, and guides for pregnancy support.
+                            For business inquiries, collaborations, or general questions, feel free to reach out to out team.
                         </p>
 
                         <p className="text-base sm:text-lg md:text-xl font-semibold break-all">
-                            help.momcare.app
+                          hello.momcare@vision-labs.site
                         </p>
 
                     </div>
