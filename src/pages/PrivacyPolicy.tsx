@@ -159,7 +159,7 @@ export default function PrivacyPolicy() {
                                 <li>Mood, diet, hydration, symptom & exercise tracking</li>
                                 <li>Reminders for scans, checkups, supplements</li>
                                 <li>Mental wellness tools like guided breathing</li>
-                                <li>Personalized insights via TrimesterFlow & ProgressHub</li>
+                                <li>Personalized insights via TriTrack & Progress</li>
                             </ul>
 
                             <p className="mt-4">

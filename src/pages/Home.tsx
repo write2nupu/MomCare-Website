@@ -87,7 +87,7 @@ const Home = () => {
                 {/* 2x2 Grid */}
                 <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-6 md:gap-12">
 
-                    {/* ProgressHub */}
+                    {/* Progress */}
                     <div className="group bg-[#faf7f8] rounded-3xl p-6 md:p-12
                           transition-all duration-500
                           hover:-translate-y-2 hover:shadow-2xl">
@@ -121,7 +121,7 @@ const Home = () => {
                             {/* TEXT */}
                             <div>
                                 <h3 className="text-xl md:text-3xl font-semibold text-gray-900">
-                                    ProgressHub
+                                    Progress
                                 </h3>
 
                                 <p className="mt-4 text-gray-600 leading-relaxed">
@@ -234,7 +234,7 @@ const Home = () => {
                     </div>
 
 
-                    {/* MoodNest */}
+                    {/* Mood */}
                     <div className="group bg-[#faf7f8] rounded-3xl p-6 md:p-12
                         transition-all duration-500
                         hover:-translate-y-2 hover:shadow-2xl">
@@ -269,7 +269,7 @@ const Home = () => {
                             {/* TEXT */}
                             <div>
                                 <h3 className="text-xl md:text-3xl font-semibold text-gray-900">
-                                    MoodNest
+                                    Mood
                                 </h3>
 
                                 <p className="mt-4 text-gray-600 leading-relaxed">

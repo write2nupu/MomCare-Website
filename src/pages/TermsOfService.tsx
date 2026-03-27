@@ -188,7 +188,7 @@ export default function TermsOfService() {
                             </p>
 
                             <p className="mt-4">
-                                <strong>ProgressHub</strong> — Track health, diet, and exercise.
+                                <strong>Progress</strong> — Track health, diet, and exercise.
                             </p>
                             <p>
                                 <strong>MyPlan</strong> — Personalized daily recommendations.
@@ -197,7 +197,7 @@ export default function TermsOfService() {
                                 <strong>TriTrack</strong> — Weekly pregnancy insights.
                             </p>
                             <p>
-                                <strong>MoodNest</strong> — Emotional wellness audio support.
+                                <strong>Mood</strong> — Emotional wellness audio support.
                             </p>
                         </div>
 

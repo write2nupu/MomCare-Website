@@ -17,12 +17,12 @@ export type FAQ = {
     {
       question: "Does the app work offline?",
       answer:
-        "Yes. Core features like ProgressHub tracking, certain wellness tools, and MoodNest relaxation exercises can work even without an internet connection."
+        "Mostly. Core features like Progress, TriTrack, certain wellness tools; but Mood (formerly known as MoodNest) relaxation exercises can not work without an internet connection."
     },
     {
       question: "Is my pregnancy data secure?",
       answer:
-        "Yes. MomCare follows strong privacy standards and uses encryption to protect personal and medical information."
+        "Yes. MomCare follows strong privacy standards. Health information is stored in-device in Apple Health. So, your data remains private and secure."
     },
     {
       question: "Can I track my baby's development week by week?",
