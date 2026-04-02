@@ -57,9 +57,13 @@ const Home = () => {
                         </p>
 
                         <div className="mt-6 md:mt-10 flex flex-col sm:flex-row gap-4 md:gap-6">
-                            <button className="bg-white text-primary px-8 py-4 rounded-2xl shadow-md transition hover:scale-[1.02]">
-                                Download App
-                            </button>
+                        <a 
+                            href="https://apps.apple.com/in/app/momcare/id6747114092"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="bg-white text-primary px-8 py-4 rounded-2xl shadow-md transition hover:scale-[1.02] inline-block">
+                            Download App
+                        </a>
 
                             <button className="border border-white text-white px-8 py-4 rounded-2xl transition hover:bg-white/20">
                                 Explore Features
